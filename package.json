@@ -1,0 +1,44 @@
+{
+  "name": "audit-app-server",
+  "version": "1.0.0",
+  "description": "Backend of Audit Tool Responsive Project",
+  "engines": {
+    "npm": ">=6.9.0",
+    "node": ">=12.14.3"
+  },
+  "license": "Publicis Sapient Inc.",
+  "private": true,
+  "scripts": {
+    "start": "nodemon src/server.js",
+    "lint": "npm run lint:js",
+    "lint:js": "npm run lint:eslint -- . ",
+    "lint:js:fix": "npm run lint:eslint -- . --fix",
+    "lint:eslint": "eslint --ext .js --ignore-path .eslintignore",
+    "lint:check": "eslint --print-config .eslintrc",
+    "format": "prettier ./**/*.js --write --ignore-unknown",
+    "format:check": "prettier ./**/*.js --check",
+    "preformat": "npm run lint:check"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "chalk": "^4.1.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.14.0",
+    "glob": "^7.2.0",
+    "helmet": "^4.6.0",
+    "ip": "^1.1.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/eslint-parser": "^7.16.5",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "lint-staged": "^12.1.2",
+    "nodemon": "^2.0.15",
+    "prettier": "2.5.1"
+  }
+}
